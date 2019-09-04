@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="Stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="rain.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+
+        <ul>
+            <h1>To do list:</h1></br>
+            <li data-key="1">task -1 <button data-key="1">delete</button></li>
+            <li data-key="2">task-2 <button data-key="2">delete</button></li>
+            <li data-key="3">task-3 <button data-key="3">delete</button></li>
+        </ul>
+    </div>
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
